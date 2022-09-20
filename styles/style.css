@@ -1,0 +1,112 @@
+*::after,*::before,*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 1240px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.grid-container{
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 600px;
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "nav main main sidebar"
+  "footer footer footer footer";
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 25% 50% 25%;
+  gap: 10px;
+}
+
+h2{
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+.grid-item{
+  padding: 40px;
+}
+
+.grid-item:nth-child(1){
+  background-color: #0074ff;
+  grid-area: header;
+}
+.grid-item:nth-child(2){
+  background-color: #71AEFF;
+  grid-area: nav;
+}
+.grid-item:nth-child(3){
+  background-color: #AEAFB4;
+  grid-area: main;
+}
+.grid-item:nth-child(4){
+  background-color: #71AEFF;
+  grid-area: sidebar;
+}
+.grid-item:nth-child(5){
+  background-color: #0074ff;
+  grid-area: footer;
+}
+
+.grid-container-two{
+  width: 100%;
+  height: 780px;
+  background-color: #0074ff;
+  margin-top: 100px;
+  display: grid;
+  gap: 20px;
+  padding: 20px 30px;
+  grid-template-areas: 
+  "masonry-I responsive overlap overlap"
+  "masonry-I fluid placed negative"
+  "flexible masonry-II placed masonry-III"
+  "order masonry-II tracks tracks";
+}
+
+.grid-item-two{
+  padding: 70px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.grid-item-two:nth-child(1){
+  grid-area: masonry-I;
+}
+.grid-item-two:nth-child(2){
+  grid-area: responsive;
+}
+.grid-item-two:nth-child(3){
+  grid-area: overlap;
+}
+.grid-item-two:nth-child(4){
+  grid-area: fluid;
+}
+.grid-item-two:nth-child(5){
+  grid-area: placed;
+}
+.grid-item-two:nth-child(6){
+  grid-area:negative;
+}
+.grid-item-two:nth-child(7){
+  grid-area: flexible;
+}
+.grid-item-two:nth-child(8){
+  grid-area: masonry-II;
+}
+.grid-item-two:nth-child(9){
+  grid-area: masonry-III;
+}
+.grid-item-two:nth-child(10){
+  grid-area: order;
+}
+.grid-item-two:nth-child(11){
+  grid-area: tracks;
+}
+
